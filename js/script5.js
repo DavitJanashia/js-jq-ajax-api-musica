@@ -14,19 +14,21 @@ function getAlbums(){
     success: function (data, state){
       var arrayAlbums = data['response'];
 
+
       // ********************************************************
       // handlebar template
       var template = $('#template').html();
       var compiled = Handlebars.compile(template);
       var target = $('.cds-container');
 
-
-
       for (var i = 0; i < 10; i++) {
         var singleAlbum = arrayAlbums[i];
-        // console.log(singleAlbum);
+        console.log(singleAlbum);
         target.append(compiled(singleAlbum));
       }
+
+
+
       // ********************************************************
       // select
       var mySelect = $('#my-select').val();
@@ -35,7 +37,7 @@ function getAlbums(){
       var myRockCd = $('.genre.Rock').parent();
       var myMetalCd = $('.genre.Metal').parent();
       var myJazzCd = $('.genre.Jazz').parent();
-      // console.log(myGenre);
+      console.log(myGenre);
 
 
       $(document).ready(function (){
