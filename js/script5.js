@@ -5,6 +5,10 @@ function init(){
 }
 // ********************************************************
 
+// si puo fare on click su option.html
+
+// ********************************************************
+
 
 function getAlbums(){
   $.ajax({
@@ -39,37 +43,32 @@ function getAlbums(){
       var myJazzCd = $('.genre.Jazz').parent();
       console.log(myGenre);
 
+      $('#popMy').click(function(){
+        $('.cd').removeClass('show');
+        myPopCd.addClass('show');
+      });
 
-      $(document).ready(function (){
-        if(mySelect == 'pop'){
-          // console.log('its pop');
-          $('.cd').removeClass('show');
-          myPopCd.addClass('show');
-
-        } else if(mySelect == 'rock'){
-          // console.log('its rock');
-          $('.cd').removeClass('show');
-          myRockCd.addClass('show');
-
-        } else if(mySelect == 'metal'){
-          // console.log('its metal');
-          $('.cd').removeClass('show');
-          myMetalCd.addClass('show');
-
-        } else if(mySelect == 'jazz'){
-          // console.log('its jazz');
-          $('.cd').removeClass('show');
-          myJazzCd.addClass('show');
-
-        } else {
-          // console.log('all');
-          if(myGenre.hasClass('Pop')){
-            $('.cd').addClass('show');
-          }
-        }
+      $('#rockMy').click(function(){
+        $('.cd').removeClass('show');
+        myRockCd.addClass('show');
       });
 
 
+      $('#metalMy').click(function(){
+        $('.cd').removeClass('show');
+        myMetalCd.addClass('show');
+      });
+
+
+      $('#jazzMy').click(function(){
+        $('.cd').removeClass('show');
+        myJazzCd.addClass('show');
+      });
+
+
+      $('#allMy').click(function(){
+        $('.cd').addClass('show');
+      });
 
 
       // ********************************************************
