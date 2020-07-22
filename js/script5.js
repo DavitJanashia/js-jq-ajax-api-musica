@@ -41,7 +41,7 @@ function getAlbums(){
       var myRockCd = $('.genre.Rock').parent();
       var myMetalCd = $('.genre.Metal').parent();
       var myJazzCd = $('.genre.Jazz').parent();
-      console.log(myGenre);
+      // console.log(myGenre);
 
       $('#popMy').click(function(){
         $('.cd').removeClass('show');
