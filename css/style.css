@@ -7,6 +7,13 @@
   /* border:1px solid black; */
   padding:5px;
 }
+.hide{
+  display: none!important;
+}
+.show{
+  display: flex!important;
+}
+
 
 
 body, html {
@@ -45,7 +52,8 @@ header img {
 }
 
 .cd {
-    display: flex;
+    /* display: flex; */
+    display: none;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
@@ -55,6 +63,7 @@ header img {
     height: 360px;
     background: rgb(46, 58, 70);
     text-align: center;
+
 }
 
 .cd img {

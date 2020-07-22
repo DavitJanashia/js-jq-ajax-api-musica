@@ -15,6 +15,7 @@ function getAlbums(){
       var arrayAlbums = data['response'];
 
       // ********************************************************
+      // handlebar template
       var template = $('#template').html();
       var compiled = Handlebars.compile(template);
       var target = $('.cds-container');
@@ -23,9 +24,52 @@ function getAlbums(){
 
       for (var i = 0; i < 10; i++) {
         var singleAlbum = arrayAlbums[i];
-        console.log(singleAlbum);
+        // console.log(singleAlbum);
         target.append(compiled(singleAlbum));
       }
+      // ********************************************************
+      // select
+      var mySelect = $('#my-select').val();
+      var myGenre = $('.genre');
+      var myPopCd = $('.genre.Pop').parent();
+      var myRockCd = $('.genre.Rock').parent();
+      var myMetalCd = $('.genre.Metal').parent();
+      var myJazzCd = $('.genre.Jazz').parent();
+      // console.log(myGenre);
+
+
+      $(document).ready(function (){
+        if(mySelect == 'pop'){
+          // console.log('its pop');
+          $('.cd').removeClass('show');
+          myPopCd.addClass('show');
+
+        } else if(mySelect == 'rock'){
+          // console.log('its rock');
+          $('.cd').removeClass('show');
+          myRockCd.addClass('show');
+
+        } else if(mySelect == 'metal'){
+          // console.log('its metal');
+          $('.cd').removeClass('show');
+          myMetalCd.addClass('show');
+
+        } else if(mySelect == 'jazz'){
+          // console.log('its jazz');
+          $('.cd').removeClass('show');
+          myJazzCd.addClass('show');
+
+        } else {
+          // console.log('all');
+          if(myGenre.hasClass('Pop')){
+            $('.cd').addClass('show');
+          }
+        }
+      });
+
+
+
+
       // ********************************************************
 
 

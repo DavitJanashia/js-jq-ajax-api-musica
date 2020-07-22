@@ -11,6 +11,7 @@
               <h3>{{ title }}</h3>
               <span class="author">{{ author }}</span>
               <span class="year">{{ year }}</span>
+              <span class="genre {{ genre }}">{{ genre }}</span>
           </div>
         </script>
         <!-- fine handlebar template -->
@@ -21,14 +22,23 @@
     </head>
     <body>
 
-
-
-
         <header>
             <div class="container">
                 <img src="img/logo.png" alt="logo" >
             </div>
         </header>
+
+        <!-- SELECT -->
+        <div class="my-select-container">
+          <select id="my-select" class="my-select" name="">
+            <option value="all">All genres</option>
+            <option value="pop">Pop</option>
+            <option value="rock">Rock</option>
+            <option value="metal">Metal</option>
+            <option value="jazz">Jazz</option>
+          </select>
+        </div>
+        <!-- fine SELECT -->
 
         <div class="cds-container container">
             <!-- Disco ad esempio -->
@@ -39,6 +49,8 @@
                 <span class="year">1993</span>
             </div> -->
         </div>
+
+
 
         <!-- JavaScript -->
         <script src="js/script5.js" charset="utf-8"></script>
